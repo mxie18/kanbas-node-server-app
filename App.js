@@ -15,7 +15,16 @@ const CONNECTION_STRING =
 
 mongoose.connect(CONNECTION_STRING);
 const app = express();
-app.use(cors({ credentials: true, origin: process.env.FRONTEND_URL }));
+app.use(
+    cors({
+        credentials: true,
+        origin: [
+            process.env.FRONTEND_URL,
+            "https://a5--gilded-puffpuff-0ef8c0.netlify.app",
+            "https://a6--gilded-puffpuff-0ef8c0.netlify.app/",
+        ],
+    })
+);
 
 const sessionOptions = {
     secret: process.env.SESSION_SECRET,
@@ -37,3 +46,5 @@ ModuleRoutes(app);
 Lab5(app);
 UserRoutes(app);
 app.listen(process.env.PORT || 4000);
+
+console.log(process.env);
