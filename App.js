@@ -21,7 +21,7 @@ app.use(
         origin: [
             process.env.FRONTEND_URL,
             "https://a5--gilded-puffpuff-0ef8c0.netlify.app",
-            "https://a6--gilded-puffpuff-0ef8c0.netlify.app/",
+            "https://a6--gilded-puffpuff-0ef8c0.netlify.app",
         ],
     })
 );
