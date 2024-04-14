@@ -46,5 +46,3 @@ ModuleRoutes(app);
 Lab5(app);
 UserRoutes(app);
 app.listen(process.env.PORT || 4000);
-
-console.log(process.env);
