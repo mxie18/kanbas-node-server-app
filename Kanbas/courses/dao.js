@@ -1,8 +1,6 @@
 import model from "./model.js";
 export const createCourse = (course) => {
     course._id = new Date().getTime().toString();
-
-    console.log(course);
     return model.create(course);
 };
 export const findAllCourses = () => model.find();

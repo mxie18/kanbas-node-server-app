@@ -41,6 +41,8 @@ function ModuleRoutes(app) {
         //     ...db.modules[moduleIndex],
         //     ...req.body,
         // };
+        console.log(mid);
+        console.log(module);
         const status = await dao.updateModule(mid, module);
         res.send(status);
     });
